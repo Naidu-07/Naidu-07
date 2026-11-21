@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="420" viewBox="0 0 780 420" fill="none">
+  <defs>
+    <filter id="p1-glow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#7C3AED" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="p1-thumb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F1F"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Card Body with Glow -->
+  <rect x="2" y="2" width="776" height="416" rx="18" fill="#070A14" stroke="#7C3AED" stroke-width="1.8" filter="url(#p1-glow)"/>
+
+  <!-- Top Terminal Bar -->
+  <rect x="2" y="2" width="776" height="40" rx="18" fill="#0A0E1C"/>
+  <rect x="2" y="24" width="776" height="18" fill="#0A0E1C"/>
+  <line x1="2" y1="42" x2="778" y2="42" stroke="#581C87" stroke-width="1"/>
+
+  <!-- macOS dots -->
+  <circle cx="24" cy="22" r="5.5" fill="#FF5F56"/>
+  <circle cx="42" cy="22" r="5.5" fill="#FFBD2E"/>
+  <circle cx="60" cy="22" r="5.5" fill="#27C93F"/>
+
+  <!-- Terminal Path -->
+  <text x="84" y="27" fill="#94A3B8" font-family="Consolas, 'SF Mono', monospace" font-size="13">~/projects/01-stories-by-sai-adabala</text>
+
+  <!-- Live Status Pill -->
+  <rect x="680" y="12" width="78" height="20" rx="10" fill="#052E16" stroke="#22C55E" stroke-width="1"/>
+  <circle cx="692" cy="22" r="3.5" fill="#22C55E"/>
+  <text x="702" y="26" fill="#4ADE80" font-family="Consolas, 'SF Mono', monospace" font-size="11" font-weight="bold">ONLINE</text>
+
+  <!-- Project Thumbnail Illustration -->
+  <g transform="translate(20, 56)">
+    <rect width="740" height="135" rx="12" fill="url(#p1-thumb)" stroke="#4C1D95" stroke-width="1"/>
+    
+    <!-- Camera Viewfinder Overlay -->
+    <path d="M20 20 H50 M20 20 V50" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
+    <path d="M720 20 H690 M720 20 V50" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
+    <path d="M20 115 H50 M20 115 V85" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
+    <path d="M720 115 H690 M720 115 V85" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Center Aperture Graphic -->
+    <g transform="translate(370, 67)">
+      <circle cx="0" cy="0" r="42" fill="none" stroke="#A855F7" stroke-width="2" stroke-dasharray="6 3"/>
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#22D3EE" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="14" fill="#0B0F1F" stroke="#F43F5E" stroke-width="2"/>
+      <circle cx="0" cy="0" r="5" fill="#38BDF8"/>
+      <!-- Crosshairs -->
+      <line x1="-50" y1="0" x2="-32" y2="0" stroke="#A855F7" stroke-width="1.5"/>
+      <line x1="32" y1="0" x2="50" y2="0" stroke="#A855F7" stroke-width="1.5"/>
+      <line x1="0" y1="-50" x2="0" y2="-32" stroke="#A855F7" stroke-width="1.5"/>
+      <line x1="0" y1="32" x2="0" y2="50" stroke="#A855F7" stroke-width="1.5"/>
+    </g>
+
+    <!-- Shutter Info Monospace Overlay -->
+    <text x="35" y="42" fill="#38BDF8" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">REC [●] 4K RAW</text>
+    <text x="35" y="62" fill="#94A3B8" font-family="Consolas, 'SF Mono', monospace" font-size="11">50mm  f/1.4  1/500s  ISO 200</text>
+    <text x="35" y="82" fill="#64748B" font-family="Consolas, 'SF Mono', monospace" font-size="11">STORY GALLERY ENGINE // ACTIVE</text>
+
+    <!-- Bokeh Orbs -->
+    <circle cx="210" cy="80" r="18" fill="#A855F7" opacity="0.15"/>
+    <circle cx="530" cy="50" r="24" fill="#22D3EE" opacity="0.12"/>
+    <circle cx="620" cy="85" r="14" fill="#F43F5E" opacity="0.18"/>
+  </g>
+
+  <!-- Project Details -->
+  <!-- Category Pill -->
+  <rect x="24" y="206" width="175" height="22" rx="11" fill="#083344" stroke="#22D3EE" stroke-width="1"/>
+  <text x="34" y="221" fill="#22D3EE" font-family="Consolas, 'SF Mono', monospace" font-size="11" font-weight="bold" letter-spacing="0.5">PHOTOGRAPHY PORTFOLIO</text>
+
+  <!-- Project Title -->
+  <text x="24" y="254" fill="#FFFFFF" font-family="Consolas, 'SF Mono', monospace" font-size="21" font-weight="bold">01 // STORIES BY SAI ADABALA</text>
+
+  <!-- Description -->
+  <text x="24" y="280" fill="#94A3B8" font-family="Consolas, 'SF Mono', monospace" font-size="14">A premium photography portfolio showcasing creative stories and visual experiences.</text>
+
+  <!-- Tech Badges -->
+  <g transform="translate(24, 304)">
+    <rect x="0" y="0" width="70" height="26" rx="13" fill="#0C1428" stroke="#38BDF8" stroke-width="1"/>
+    <text x="14" y="17" fill="#38BDF8" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">HTML5</text>
+
+    <rect x="80" y="0" width="65" height="26" rx="13" fill="#0C1428" stroke="#FACC15" stroke-width="1"/>
+    <text x="94" y="17" fill="#FACC15" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">CSS3</text>
+
+    <rect x="155" y="0" width="105" height="26" rx="13" fill="#0C1428" stroke="#4ADE80" stroke-width="1"/>
+    <text x="169" y="17" fill="#4ADE80" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">JavaScript</text>
+
+    <rect x="270" y="0" width="125" height="26" rx="13" fill="#0C1428" stroke="#C084FC" stroke-width="1"/>
+    <text x="284" y="17" fill="#C084FC" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">Visual Gallery</text>
+  </g>
+
+  <!-- Card Action Footer -->
+  <line x1="24" y1="352" x2="756" y2="352" stroke="#1E1B4B" stroke-width="1"/>
+  
+  <!-- Buttons in card -->
+  <g transform="translate(24, 368)">
+    <!-- Repo button -->
+    <rect x="0" y="0" width="150" height="32" rx="16" fill="#0E1326" stroke="#6D28D9" stroke-width="1"/>
+    <text x="20" y="21" fill="#C084FC" font-family="Consolas, 'SF Mono', monospace" font-size="13" font-weight="bold">📁 Repository ↗</text>
+
+    <!-- Live Demo button -->
+    <rect x="165" y="0" width="145" height="32" rx="16" fill="#052E16" stroke="#22C55E" stroke-width="1"/>
+    <text x="185" y="21" fill="#4ADE80" font-family="Consolas, 'SF Mono', monospace" font-size="13" font-weight="bold">🌐 Live Demo ↗</text>
+
+    <!-- Terminal Command Hint -->
+    <text x="470" y="21" fill="#64748B" font-family="Consolas, 'SF Mono', monospace" font-size="12">git clone storiesbysaiadabala</text>
+  </g>
+</svg>

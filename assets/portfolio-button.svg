@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="165" height="44" viewBox="0 0 165 44" fill="none">
+  <defs>
+    <filter id="glow-port" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#A855F7" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <!-- Pill Background & Border -->
+  <rect x="1.5" y="1.5" width="162" height="41" rx="20.5" fill="#070A14" stroke="#A855F7" stroke-width="1.5" filter="url(#glow-port)"/>
+  <!-- Chain Link Icon -->
+  <g transform="translate(18, 12)" stroke="#C084FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M10 13a4.5 4.5 0 006.36-6.36l-2-2a4.5 4.5 0 00-6.36 0"/>
+    <path d="M10 7a4.5 4.5 0 00-6.36 6.36l2 2a4.5 4.5 0 006.36 0"/>
+    <line x1="8" y1="12" x2="12" y2="8"/>
+  </g>
+  <!-- Text Label -->
+  <text x="48" y="27" fill="#C084FC" font-family="Consolas, 'SF Mono', 'Courier New', monospace" font-size="15" font-weight="bold" letter-spacing="0.5">Portfolio</text>
+</svg>

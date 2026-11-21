@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="44" viewBox="0 0 160 44" fill="none">
+  <defs>
+    <filter id="glow-li" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#38BDF8" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <!-- Pill Background & Border -->
+  <rect x="1.5" y="1.5" width="157" height="41" rx="20.5" fill="#070A14" stroke="#38BDF8" stroke-width="1.5" filter="url(#glow-li)"/>
+  <!-- LinkedIn Icon -->
+  <g transform="translate(20, 12)">
+    <rect x="0" y="0" width="20" height="20" rx="4" fill="#0284C7"/>
+    <text x="3.5" y="15" fill="#070A14" font-family="Consolas, 'SF Mono', sans-serif" font-size="14" font-weight="900">in</text>
+  </g>
+  <!-- Text Label -->
+  <text x="50" y="27" fill="#38BDF8" font-family="Consolas, 'SF Mono', 'Courier New', monospace" font-size="15" font-weight="bold" letter-spacing="0.5">LinkedIn</text>
+</svg>

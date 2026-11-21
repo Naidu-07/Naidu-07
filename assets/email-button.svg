@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="145" height="44" viewBox="0 0 145 44" fill="none">
+  <defs>
+    <filter id="glow-mail" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#FB923C" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <!-- Pill Background & Border -->
+  <rect x="1.5" y="1.5" width="142" height="41" rx="20.5" fill="#070A14" stroke="#FB923C" stroke-width="1.5" filter="url(#glow-mail)"/>
+  <!-- Envelope Icon -->
+  <g transform="translate(18, 12)" stroke="#FB923C" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="2" width="20" height="15" rx="2.5"/>
+    <path d="M1 4.5L10 11.5L19 4.5"/>
+  </g>
+  <!-- Text Label -->
+  <text x="48" y="27" fill="#FB923C" font-family="Consolas, 'SF Mono', 'Courier New', monospace" font-size="15" font-weight="bold" letter-spacing="0.5">Email</text>
+</svg>

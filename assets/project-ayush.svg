@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="420" viewBox="0 0 780 420" fill="none">
+  <defs>
+    <filter id="p2-glow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#7C3AED" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="p2-thumb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F1F"/>
+      <stop offset="100%" stop-color="#241B0E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Card Body with Glow -->
+  <rect x="2" y="2" width="776" height="416" rx="18" fill="#070A14" stroke="#7C3AED" stroke-width="1.8" filter="url(#p2-glow)"/>
+
+  <!-- Top Terminal Bar -->
+  <rect x="2" y="2" width="776" height="40" rx="18" fill="#0A0E1C"/>
+  <rect x="2" y="24" width="776" height="18" fill="#0A0E1C"/>
+  <line x1="2" y1="42" x2="778" y2="42" stroke="#581C87" stroke-width="1"/>
+
+  <!-- macOS dots -->
+  <circle cx="24" cy="22" r="5.5" fill="#FF5F56"/>
+  <circle cx="42" cy="22" r="5.5" fill="#FFBD2E"/>
+  <circle cx="60" cy="22" r="5.5" fill="#27C93F"/>
+
+  <!-- Terminal Path -->
+  <text x="84" y="27" fill="#94A3B8" font-family="Consolas, 'SF Mono', monospace" font-size="13">~/projects/02-ayush-enterprises</text>
+
+  <!-- Live Status Pill -->
+  <rect x="680" y="12" width="78" height="20" rx="10" fill="#052E16" stroke="#22C55E" stroke-width="1"/>
+  <circle cx="692" cy="22" r="3.5" fill="#22C55E"/>
+  <text x="702" y="26" fill="#4ADE80" font-family="Consolas, 'SF Mono', monospace" font-size="11" font-weight="bold">ONLINE</text>
+
+  <!-- Project Thumbnail Illustration -->
+  <g transform="translate(20, 56)">
+    <rect width="740" height="135" rx="12" fill="url(#p2-thumb)" stroke="#78350F" stroke-width="1"/>
+    
+    <!-- Architectural Grid Background -->
+    <path d="M40 0 V135 M120 0 V135 M200 0 V135 M280 0 V135 M360 0 V135 M440 0 V135 M520 0 V135 M600 0 V135 M680 0 V135" stroke="#1E293B" stroke-width="0.75" stroke-dasharray="3 3"/>
+    <path d="M0 35 H740 M0 70 H740 M0 105 H740" stroke="#1E293B" stroke-width="0.75" stroke-dasharray="3 3"/>
+
+    <!-- Construction / Enterprise Structure Vector -->
+    <g transform="translate(370, 70)">
+      <!-- Isometric Building / Structure -->
+      <polygon points="0,-45 55,-15 55,45 0,15" fill="#451A03" opacity="0.4" stroke="#F59E0B" stroke-width="1.5"/>
+      <polygon points="0,-45 -55,-15 -55,45 0,15" fill="#78350F" opacity="0.4" stroke="#F59E0B" stroke-width="1.5"/>
+      <polygon points="0,-45 55,-15 0,15 -55,-15" fill="#D97706" opacity="0.3" stroke="#F59E0B" stroke-width="1.5"/>
+
+      <!-- Blueprint Scaffold Lines -->
+      <line x1="-55" y1="15" x2="0" y2="-15" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4 2"/>
+      <line x1="55" y1="15" x2="0" y2="-15" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4 2"/>
+      <line x1="0" y1="15" x2="0" y2="-45" stroke="#F59E0B" stroke-width="2"/>
+
+      <!-- Foundation Anchor Nodes -->
+      <circle cx="-55" cy="45" r="4" fill="#F59E0B"/>
+      <circle cx="0" cy="15" r="4" fill="#38BDF8"/>
+      <circle cx="55" cy="45" r="4" fill="#F59E0B"/>
+      <circle cx="0" cy="-45" r="4" fill="#FBBF24"/>
+    </g>
+
+    <!-- Industrial Blueprint Spec Overlay -->
+    <text x="35" y="42" fill="#F59E0B" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">INDUSTRIAL CATALOG // SPEC-2024</text>
+    <text x="35" y="62" fill="#94A3B8" font-family="Consolas, 'SF Mono', monospace" font-size="11">Equipment  Materials  Structural Ops</text>
+    <text x="35" y="82" fill="#64748B" font-family="Consolas, 'SF Mono', monospace" font-size="11">DEPLOYED: naidu-07.github.io/ayush-enterprises</text>
+
+    <!-- Accent Measure Lines -->
+    <path d="M600 35 L680 35" stroke="#F59E0B" stroke-width="1.5"/>
+    <path d="M600 30 V40 M680 30 V40" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="618" y="52" fill="#F59E0B" font-family="Consolas, 'SF Mono', monospace" font-size="10">80.0m SPAN</text>
+  </g>
+
+  <!-- Project Details -->
+  <!-- Category Pill -->
+  <rect x="24" y="206" width="185" height="22" rx="11" fill="#451A03" stroke="#F59E0B" stroke-width="1"/>
+  <text x="34" y="221" fill="#FBBF24" font-family="Consolas, 'SF Mono', monospace" font-size="11" font-weight="bold" letter-spacing="0.5">CONSTRUCTION &amp; BUSINESS</text>
+
+  <!-- Project Title -->
+  <text x="24" y="254" fill="#FFFFFF" font-family="Consolas, 'SF Mono', monospace" font-size="21" font-weight="bold">02 // AYUSH ENTERPRISES</text>
+
+  <!-- Description -->
+  <text x="24" y="280" fill="#94A3B8" font-family="Consolas, 'SF Mono', monospace" font-size="14">A professional business website showcasing construction materials, products, and equipment.</text>
+
+  <!-- Tech Badges -->
+  <g transform="translate(24, 304)">
+    <rect x="0" y="0" width="115" height="26" rx="13" fill="#0C1428" stroke="#F59E0B" stroke-width="1"/>
+    <text x="14" y="17" fill="#FBBF24" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">Business Ops</text>
+
+    <rect x="125" y="0" width="140" height="26" rx="13" fill="#0C1428" stroke="#38BDF8" stroke-width="1"/>
+    <text x="139" y="17" fill="#38BDF8" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">Material Catalog</text>
+
+    <rect x="275" y="0" width="120" height="26" rx="13" fill="#0C1428" stroke="#4ADE80" stroke-width="1"/>
+    <text x="289" y="17" fill="#4ADE80" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">Web Platform</text>
+
+    <rect x="405" y="0" width="125" height="26" rx="13" fill="#0C1428" stroke="#C084FC" stroke-width="1"/>
+    <text x="419" y="17" fill="#C084FC" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">Responsive UI</text>
+  </g>
+
+  <!-- Card Action Footer -->
+  <line x1="24" y1="352" x2="756" y2="352" stroke="#1E1B4B" stroke-width="1"/>
+  
+  <!-- Buttons in card -->
+  <g transform="translate(24, 368)">
+    <!-- Repo button -->
+    <rect x="0" y="0" width="150" height="32" rx="16" fill="#0E1326" stroke="#6D28D9" stroke-width="1"/>
+    <text x="20" y="21" fill="#C084FC" font-family="Consolas, 'SF Mono', monospace" font-size="13" font-weight="bold">📁 Repository ↗</text>
+
+    <!-- Live Demo button -->
+    <rect x="165" y="0" width="145" height="32" rx="16" fill="#052E16" stroke="#22C55E" stroke-width="1"/>
+    <text x="185" y="21" fill="#4ADE80" font-family="Consolas, 'SF Mono', monospace" font-size="13" font-weight="bold">🌐 Live Demo ↗</text>
+
+    <!-- Terminal Command Hint -->
+    <text x="470" y="21" fill="#64748B" font-family="Consolas, 'SF Mono', monospace" font-size="12">git clone ayush-enterprises</text>
+  </g>
+</svg>
