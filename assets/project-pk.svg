@@ -2,9 +2,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="420" viewBox="0 0 780 420" fill="none">
 
   <defs>
+
     <filter id="p4-glow" x="-5%" y="-5%" width="110%" height="110%">
       <feDropShadow dx="0" dy="0" stdDeviation="4"
         flood-color="#7C3AED" flood-opacity="0.35"/>
+    </filter>
+
+    <filter id="green-glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
 
     <linearGradient id="p4-thumb" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -17,14 +26,15 @@
       <stop offset="100%" stop-color="#064E3B" stop-opacity="0.1"/>
     </linearGradient>
 
-    <pattern id="p4-grid" width="25" height="25" patternUnits="userSpaceOnUse">
-      <path d="M25 0 H0 V25"
-        stroke="#10B981" stroke-width="0.5" opacity="0.12"/>
+    <pattern id="p4-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0 H0 V24"
+        stroke="#10B981" stroke-width="0.5" opacity="0.15"/>
     </pattern>
 
     <clipPath id="p4-clip">
       <rect width="740" height="135" rx="12"/>
     </clipPath>
+
   </defs>
 
   <!-- Card Body -->
@@ -33,9 +43,14 @@
     filter="url(#p4-glow)"/>
 
   <!-- Terminal Header -->
-  <rect x="2" y="2" width="776" height="40" rx="18" fill="#0A0E1C"/>
-  <rect x="2" y="24" width="776" height="18" fill="#0A0E1C"/>
-  <line x1="2" y1="42" x2="778" y2="42" stroke="#581C87"/>
+  <rect x="2" y="2" width="776" height="40" rx="18"
+    fill="#0A0E1C"/>
+
+  <rect x="2" y="24" width="776" height="18"
+    fill="#0A0E1C"/>
+
+  <line x1="2" y1="42" x2="778" y2="42"
+    stroke="#581C87"/>
 
   <!-- macOS Window Controls -->
   <circle cx="24" cy="22" r="5.5" fill="#FF5F56"/>
@@ -45,13 +60,18 @@
   <!-- Terminal Path -->
   <text x="84" y="27" fill="#94A3B8"
     font-family="Consolas, 'SF Mono', monospace"
-    font-size="13">~/projects/03-pk-ventures</text>
+    font-size="13">~/projects/04-pk-ventures</text>
 
   <!-- Online Status -->
   <rect x="680" y="12" width="78" height="20" rx="10"
     fill="#052E16" stroke="#22C55E"/>
 
-  <circle cx="692" cy="22" r="3.5" fill="#22C55E"/>
+  <circle cx="692" cy="22" r="3.5" fill="#22C55E">
+    <animate attributeName="opacity"
+      values="1;0.3;1"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
 
   <text x="702" y="26" fill="#4ADE80"
     font-family="Consolas, 'SF Mono', monospace"
@@ -68,77 +88,296 @@
       <!-- Technical Grid -->
       <rect width="740" height="135" fill="url(#p4-grid)"/>
 
-      <!-- Background Contour Waves -->
+      <!-- Animated Background Waves -->
       <path d="M0 110 Q140 35 300 90 T580 50 T740 75"
-        stroke="#10B981" stroke-width="1.5" opacity="0.25"/>
+        stroke="#10B981" stroke-width="1.5" opacity="0.3">
+
+        <animate attributeName="d"
+          values="
+          M0 110 Q140 35 300 90 T580 50 T740 75;
+          M0 95 Q140 60 300 70 T580 75 T740 50;
+          M0 110 Q140 35 300 90 T580 50 T740 75"
+          dur="8s"
+          repeatCount="indefinite"/>
+
+      </path>
 
       <path d="M0 90 Q160 20 310 70 T590 30 T740 65"
-        stroke="#34D399" stroke-width="1.5" opacity="0.25"/>
+        stroke="#34D399" stroke-width="1.2" opacity="0.25"/>
 
       <path d="M0 125 Q150 60 320 110 T600 85 T740 100"
         stroke="#6EE7B7" stroke-width="1" opacity="0.2"/>
 
-      <!-- Architectural Scanner -->
-      <g transform="translate(500,68)">
-        <circle r="56" stroke="#10B981"
-          stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+      <!-- HUD Corner Markers -->
+      <g stroke="#34D399" stroke-width="1.5"
+        stroke-linecap="round" opacity="0.8">
 
-        <circle r="46" stroke="#34D399"
-          stroke-width="0.7" opacity="0.25"/>
+        <path d="M15 35 V15 H35"/>
+        <path d="M705 15 H725 V35"/>
+        <path d="M15 100 V120 H35"/>
+        <path d="M705 120 H725 V100"/>
 
-        <path d="M-65 0 H-52 M52 0 H65 M0 -65 V-52 M0 52 V65"
-          stroke="#34D399" stroke-width="1.2"/>
       </g>
 
-      <!-- Ground Platform -->
-      <polygon points="340,108 490,83 680,108 530,133"
-        fill="#064E3B" fill-opacity="0.5"
-        stroke="#10B981" stroke-width="1"/>
+      <!-- Rotating Architectural Scanner -->
+      <g transform="translate(510,68)">
 
-      <!-- Left Building -->
-      <g stroke="#34D399" stroke-width="1.2">
+        <circle r="58"
+          stroke="#10B981"
+          stroke-width="0.8"
+          opacity="0.25"/>
 
-        <polygon points="395,44 430,31 430,98 395,111"
-          fill="url(#p4-building)"/>
+        <circle r="50"
+          stroke="#34D399"
+          stroke-width="1.2"
+          stroke-dasharray="5 5"
+          opacity="0.65">
 
-        <polygon points="430,31 465,44 465,111 430,98"
-          fill="#065F46" fill-opacity="0.45"/>
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 0 0"
+            to="360 0 0"
+            dur="20s"
+            repeatCount="indefinite"/>
 
-        <polygon points="395,44 430,31 465,44 430,57"
-          fill="#10B981" fill-opacity="0.25"/>
+        </circle>
 
-        <!-- Building Windows -->
-        <path d="M405 54 V96 M417 50 V92
-                 M440 48 V96 M452 53 V101"
-          opacity="0.65"/>
+        <circle r="40"
+          stroke="#6EE7B7"
+          stroke-width="0.6"
+          opacity="0.2"/>
 
-        <path d="M395 66 L430 53 L465 66
-                 M395 82 L430 69 L465 82
-                 M395 98 L430 85 L465 98"
-          opacity="0.65"/>
+        <path d="M-65 0 H-52 M52 0 H65
+                 M0 -65 V-52 M0 52 V65"
+          stroke="#34D399" opacity="0.6"/>
+
       </g>
 
-      <!-- Right Building -->
-      <g stroke="#34D399" stroke-width="1.2">
+      <!-- Isometric Ground Platform -->
+      <polygon points="310,108 490,80 700,108 520,134"
+        fill="#064E3B"
+        fill-opacity="0.45"
+        stroke="#10B981"
+        stroke-width="1"/>
 
-        <polygon points="565,35 600,22 600,93 565,106"
-          fill="url(#p4-building)"/>
+      <!-- Ground Grid -->
+      <g stroke="#34D399" stroke-width="0.7" opacity="0.25">
 
-        <polygon points="600,22 635,35 635,106 600,93"
-          fill="#065F46" fill-opacity="0.45"/>
+        <path d="M340 103 L550 129
+                 M370 98 L580 124
+                 M400 94 L610 119
+                 M430 89 L640 114
+                 M460 84 L670 109"/>
 
-        <polygon points="565,35 600,22 635,35 600,48"
-          fill="#10B981" fill-opacity="0.25"/>
+        <path d="M350 113 L530 85
+                 M390 118 L570 90
+                 M430 123 L610 95
+                 M470 128 L650 100"/>
 
-        <!-- Building Windows -->
-        <path d="M575 44 V94 M587 40 V90
-                 M610 39 V91 M622 44 V96"
-          opacity="0.65"/>
+      </g>
 
-        <path d="M565 56 L600 43 L635 56
-                 M565 73 L600 60 L635 73
-                 M565 90 L600 77 L635 90"
-          opacity="0.65"/>
+      <!-- Open Plot Development -->
+      <g stroke="#10B981" stroke-width="1.2">
+
+        <polygon points="315,100 350,89 385,100 350,112"
+          fill="#10B981" fill-opacity="0.12">
+
+          <animate attributeName="fill-opacity"
+            values="0.12;0.45;0.12"
+            dur="3s"
+            repeatCount="indefinite"/>
+
+        </polygon>
+
+        <path d="M332 95 L367 106
+                 M332 106 L367 95"
+          opacity="0.7"/>
+
+        <polygon points="350,113 385,102 420,113 385,124"
+          fill="#10B981" fill-opacity="0.12"/>
+
+      </g>
+
+      <!-- Floating Location Pin -->
+      <g transform="translate(350,72)">
+
+        <g>
+
+          <path d="M0 22
+                   C-5 14 -13 7 -13 -2
+                   A13 13 0 1 1 13 -2
+                   C13 7 5 14 0 22Z"
+            fill="#064E3B"
+            stroke="#34D399"
+            stroke-width="1.5"
+            filter="url(#green-glow)"/>
+
+          <circle cy="-2" r="4.5" fill="#6EE7B7"/>
+
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0 0;0 -6;0 0"
+            dur="3s"
+            repeatCount="indefinite"/>
+
+        </g>
+
+      </g>
+
+      <!-- Location Pin Pulse -->
+      <ellipse cx="350" cy="100" rx="10" ry="4"
+        stroke="#34D399" opacity="0.7">
+
+        <animate attributeName="rx"
+          values="5;22;5"
+          dur="3s"
+          repeatCount="indefinite"/>
+
+        <animate attributeName="ry"
+          values="2;8;2"
+          dur="3s"
+          repeatCount="indefinite"/>
+
+        <animate attributeName="opacity"
+          values="0.8;0.1;0.8"
+          dur="3s"
+          repeatCount="indefinite"/>
+
+      </ellipse>
+
+      <!-- Left Building Development -->
+      <g transform="translate(430,110)">
+
+        <g stroke="#34D399" stroke-width="1.2">
+
+          <!-- Building Faces -->
+          <polygon points="-35,-65 0,-78 0,-12 -35,0"
+            fill="url(#p4-building)"/>
+
+          <polygon points="0,-78 35,-65 35,0 0,-12"
+            fill="#065F46" fill-opacity="0.45"/>
+
+          <polygon points="-35,-65 0,-78 35,-65 0,-52"
+            fill="#10B981" fill-opacity="0.25"/>
+
+          <!-- Floor Divisions -->
+          <path d="M-35 -45 L0 -58 L35 -45
+                   M-35 -25 L0 -38 L35 -25
+                   M-35 -5 L0 -18 L35 -5"/>
+
+          <!-- Vertical Columns -->
+          <path d="M-23 -69 V-4
+                   M-12 -74 V-8
+                   M12 -74 V-8
+                   M24 -69 V-4"
+            opacity="0.7"/>
+
+          <!-- Glowing Windows -->
+          <g fill="#6EE7B7" stroke="none">
+
+            <rect x="-30" y="-39" width="5" height="7">
+              <animate attributeName="opacity"
+                values="0.2;1;0.2"
+                dur="4s"
+                repeatCount="indefinite"/>
+            </rect>
+
+            <rect x="-18" y="-23" width="5" height="7">
+              <animate attributeName="opacity"
+                values="1;0.2;1"
+                dur="3s"
+                repeatCount="indefinite"/>
+            </rect>
+
+            <rect x="17" y="-42" width="5" height="7">
+              <animate attributeName="opacity"
+                values="0.3;1;0.3"
+                dur="5s"
+                repeatCount="indefinite"/>
+            </rect>
+
+          </g>
+
+          <!-- Building Growth Animation -->
+          <animateTransform
+            attributeName="transform"
+            type="scale"
+            values="1 1;1 1;1 0.08;1 1;1 1"
+            keyTimes="0;0.45;0.55;0.8;1"
+            dur="12s"
+            repeatCount="indefinite"/>
+
+        </g>
+
+      </g>
+
+      <!-- Right Building Development -->
+      <g transform="translate(600,108)">
+
+        <g stroke="#34D399" stroke-width="1.2">
+
+          <polygon points="-35,-73 0,-86 0,-12 -35,0"
+            fill="url(#p4-building)"/>
+
+          <polygon points="0,-86 35,-73 35,0 0,-12"
+            fill="#065F46" fill-opacity="0.45"/>
+
+          <polygon points="-35,-73 0,-86 35,-73 0,-60"
+            fill="#10B981" fill-opacity="0.25"/>
+
+          <!-- Floor Divisions -->
+          <path d="M-35 -55 L0 -68 L35 -55
+                   M-35 -37 L0 -50 L35 -37
+                   M-35 -19 L0 -32 L35 -19
+                   M-35 -1 L0 -14 L35 -1"/>
+
+          <!-- Vertical Columns -->
+          <path d="M-23 -77 V-4
+                   M-12 -82 V-8
+                   M12 -82 V-8
+                   M24 -77 V-4"
+            opacity="0.7"/>
+
+          <!-- Animated Windows -->
+          <g fill="#6EE7B7" stroke="none">
+
+            <rect x="-30" y="-49" width="5" height="7">
+              <animate attributeName="opacity"
+                values="1;0.2;1"
+                dur="3s"
+                repeatCount="indefinite"/>
+            </rect>
+
+            <rect x="-18" y="-33" width="5" height="7">
+              <animate attributeName="opacity"
+                values="0.2;1;0.2"
+                dur="4s"
+                repeatCount="indefinite"/>
+            </rect>
+
+            <rect x="17" y="-55" width="5" height="7">
+              <animate attributeName="opacity"
+                values="0.3;1;0.3"
+                dur="5s"
+                repeatCount="indefinite"/>
+            </rect>
+
+          </g>
+
+          <!-- Building Growth Animation -->
+          <animateTransform
+            attributeName="transform"
+            type="scale"
+            values="1 1;1 1;1 0.08;1 1;1 1"
+            keyTimes="0;0.45;0.55;0.8;1"
+            dur="12s"
+            begin="0.5s"
+            repeatCount="indefinite"/>
+
+        </g>
+
       </g>
 
       <!-- Gated Community Entrance -->
@@ -153,47 +392,96 @@
 
         <!-- Entrance Arch -->
         <path d="M481 76 Q513 44 546 76"
-          stroke-width="2.5"/>
+          stroke-width="2.5"
+          filter="url(#green-glow)">
+
+          <animate attributeName="opacity"
+            values="0.5;1;0.5"
+            dur="3s"
+            repeatCount="indefinite"/>
+
+        </path>
 
         <path d="M481 82 Q513 52 546 82"
           opacity="0.6"/>
 
-        <!-- Gate -->
+        <!-- Gate Frame -->
         <rect x="487" y="85" width="53" height="26"
-          fill="#022C22" fill-opacity="0.5"/>
+          fill="#022C22" fill-opacity="0.6"/>
 
-        <path d="M496 85 V111 M505 85 V111
-                 M514 85 V111 M523 85 V111
-                 M532 85 V111"/>
-      </g>
+        <!-- Left Gate -->
+        <g>
+          <path d="M487 85 H513 V111 H487Z
+                   M496 85 V111
+                   M505 85 V111"/>
 
-      <!-- Open Plot Layout -->
-      <g stroke="#10B981" stroke-width="1" opacity="0.7">
-        <polygon points="310,100 350,88 390,100 350,112"
-          fill="#10B981" fill-opacity="0.1"/>
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0 0;-10 0;-10 0;0 0"
+            keyTimes="0;0.3;0.7;1"
+            dur="6s"
+            repeatCount="indefinite"/>
 
-        <path d="M330 94 L370 106 M330 106 L370 94"/>
-      </g>
+        </g>
 
-      <!-- Location Pin -->
-      <g transform="translate(350,75)">
-        <path d="M0 22 C-5 14 -13 7 -13 -2
-                 A13 13 0 1 1 13 -2
-                 C13 7 5 14 0 22Z"
-          fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+        <!-- Right Gate -->
+        <g>
+          <path d="M513 85 H540 V111 H513Z
+                   M522 85 V111
+                   M531 85 V111"/>
 
-        <circle cy="-2" r="4" fill="#34D399"/>
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0 0;10 0;10 0;0 0"
+            keyTimes="0;0.3;0.7;1"
+            dur="6s"
+            repeatCount="indefinite"/>
+
+        </g>
+
       </g>
 
       <!-- Road Perspective -->
-      <path d="M500 111 L465 135 M527 111 L575 135"
-        stroke="#34D399" stroke-width="1.5" opacity="0.65"/>
+      <path d="M500 111 L465 135
+               M527 111 L575 135"
+        stroke="#34D399"
+        stroke-width="1.5"
+        opacity="0.7"/>
 
-      <path d="M514 113 L520 135"
-        stroke="#6EE7B7" stroke-dasharray="4 4" opacity="0.6"/>
+      <!-- Animated Road Markings -->
+      <path d="M514 112 L520 135"
+        stroke="#6EE7B7"
+        stroke-width="1.5"
+        stroke-dasharray="4 5">
+
+        <animate attributeName="stroke-dashoffset"
+          from="0" to="-18"
+          dur="1.5s"
+          repeatCount="indefinite"/>
+
+      </path>
+
+      <!-- Moving Road Light -->
+      <circle r="2.5" fill="#6EE7B7"
+        filter="url(#green-glow)">
+
+        <animateMotion
+          path="M520 135 L514 112"
+          dur="2.5s"
+          repeatCount="indefinite"/>
+
+        <animate attributeName="opacity"
+          values="0;1;0"
+          dur="2.5s"
+          repeatCount="indefinite"/>
+
+      </circle>
 
       <!-- Landscape Trees -->
       <g stroke="#10B981" stroke-width="1.2">
+
         <path d="M380 106 V84"/>
         <circle cx="380" cy="79" r="9" fill="#064E3B"/>
 
@@ -202,16 +490,28 @@
 
         <path d="M670 112 V96"/>
         <circle cx="670" cy="92" r="7" fill="#064E3B"/>
+
       </g>
 
-      <!-- HUD Corner Markers -->
-      <path d="M15 30 V15 H30
-               M710 15 H725 V30
-               M15 105 V120 H30
-               M710 120 H725 V105"
-        stroke="#34D399" stroke-width="1.5" opacity="0.65"/>
+      <!-- Animated Architectural Scan -->
+      <line x1="390" y1="25" x2="640" y2="25"
+        stroke="#6EE7B7"
+        stroke-width="1.2"
+        opacity="0.45">
 
-      <!-- Developer-Focused HUD Text -->
+        <animate attributeName="y1"
+          values="25;115;25"
+          dur="5s"
+          repeatCount="indefinite"/>
+
+        <animate attributeName="y2"
+          values="25;115;25"
+          dur="5s"
+          repeatCount="indefinite"/>
+
+      </line>
+
+      <!-- Developer HUD Text -->
       <text x="35" y="42" fill="#34D399"
         font-family="Consolas, 'SF Mono', monospace"
         font-size="12" font-weight="bold">REAL ESTATE PLATFORM // V1.0</text>
@@ -220,10 +520,24 @@
         font-family="Consolas, 'SF Mono', monospace"
         font-size="11">3D VISUALS &amp; INTERACTIVE UI</text>
 
+      <!-- Active Status -->
+      <circle cx="39" cy="102" r="3" fill="#34D399">
+
+        <animate attributeName="opacity"
+          values="1;0.2;1"
+          dur="1.5s"
+          repeatCount="indefinite"/>
+
+      </circle>
+
+      <text x="49" y="106" fill="#34D399"
+        font-family="Consolas, 'SF Mono', monospace"
+        font-size="10">PLATFORM ACTIVE</text>
+
     </g>
   </g>
 
-  <!-- Project Category -->
+  <!-- Category Pill -->
   <rect x="24" y="206" width="180" height="22" rx="11"
     fill="#064E3B" stroke="#10B981"/>
 
@@ -249,7 +563,8 @@
     <rect width="140" height="26" rx="13"
       fill="#0C1428" stroke="#10B981"/>
 
-    <text x="70" y="17" text-anchor="middle" fill="#34D399"
+    <text x="70" y="17" text-anchor="middle"
+      fill="#34D399"
       font-family="Consolas, 'SF Mono', monospace"
       font-size="12" font-weight="bold">3D Animations</text>
 
@@ -257,7 +572,8 @@
     <rect x="150" width="125" height="26" rx="13"
       fill="#0C1428" stroke="#38BDF8"/>
 
-    <text x="212.5" y="17" text-anchor="middle" fill="#38BDF8"
+    <text x="212.5" y="17" text-anchor="middle"
+      fill="#38BDF8"
       font-family="Consolas, 'SF Mono', monospace"
       font-size="12" font-weight="bold">Interactive UI</text>
 
@@ -265,7 +581,8 @@
     <rect x="285" width="135" height="26" rx="13"
       fill="#0C1428" stroke="#FACC15"/>
 
-    <text x="352.5" y="17" text-anchor="middle" fill="#FACC15"
+    <text x="352.5" y="17" text-anchor="middle"
+      fill="#FACC15"
       font-family="Consolas, 'SF Mono', monospace"
       font-size="12" font-weight="bold">Scroll Effects</text>
 
@@ -273,14 +590,11 @@
     <rect x="430" width="145" height="26" rx="13"
       fill="#0C1428" stroke="#C084FC"/>
 
-    <text x="502.5" y="17" text-anchor="middle" fill="#C084FC"
+    <text x="502.5" y="17" text-anchor="middle"
+      fill="#C084FC"
       font-family="Consolas, 'SF Mono', monospace"
       font-size="12" font-weight="bold">Responsive Design</text>
 
   </g>
-
-  <!-- Footer Divider -->
-  <line x1="24" y1="352" x2="756" y2="352"
-    stroke="#1E1B4B"/>
 
 </svg>
