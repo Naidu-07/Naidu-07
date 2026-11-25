@@ -1,109 +1,360 @@
+
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="420" viewBox="0 0 780 420" fill="none">
+
   <defs>
     <filter id="p1-glow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#7C3AED" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="4"
+        flood-color="#7C3AED" flood-opacity="0.35"/>
     </filter>
+
+    <filter id="lens-glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
     <linearGradient id="p1-thumb" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0B0F1F"/>
       <stop offset="100%" stop-color="#1E1B4B"/>
     </linearGradient>
+
+    <linearGradient id="camera-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312E81"/>
+      <stop offset="100%" stop-color="#080C1A"/>
+    </linearGradient>
+
+    <radialGradient id="camera-lens">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.65"/>
+      <stop offset="40%" stop-color="#312E81"/>
+      <stop offset="75%" stop-color="#172554"/>
+      <stop offset="100%" stop-color="#080C1A"/>
+    </radialGradient>
+
+    <linearGradient id="photo-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#312E81"/>
+      <stop offset="100%" stop-color="#0E7490"/>
+    </linearGradient>
+
+    <pattern id="p1-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0 H0 V24"
+        stroke="#A855F7" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+
+    <clipPath id="p1-clip">
+      <rect width="740" height="135" rx="12"/>
+    </clipPath>
   </defs>
 
-  <!-- Card Body with Glow -->
-  <rect x="2" y="2" width="776" height="416" rx="18" fill="#070A14" stroke="#7C3AED" stroke-width="1.8" filter="url(#p1-glow)"/>
+  <!-- Card Body -->
+  <rect x="2" y="2" width="776" height="416" rx="18"
+    fill="#070A14" stroke="#7C3AED" stroke-width="1.8"
+    filter="url(#p1-glow)"/>
 
-  <!-- Top Terminal Bar -->
+  <!-- Terminal Header -->
   <rect x="2" y="2" width="776" height="40" rx="18" fill="#0A0E1C"/>
   <rect x="2" y="24" width="776" height="18" fill="#0A0E1C"/>
-  <line x1="2" y1="42" x2="778" y2="42" stroke="#581C87" stroke-width="1"/>
+  <line x1="2" y1="42" x2="778" y2="42" stroke="#581C87"/>
 
-  <!-- macOS dots -->
+  <!-- Window Controls -->
   <circle cx="24" cy="22" r="5.5" fill="#FF5F56"/>
   <circle cx="42" cy="22" r="5.5" fill="#FFBD2E"/>
   <circle cx="60" cy="22" r="5.5" fill="#27C93F"/>
 
   <!-- Terminal Path -->
-  <text x="84" y="27" fill="#94A3B8" font-family="Consolas, 'SF Mono', monospace" font-size="13">~/projects/01-stories-by-sai-adabala</text>
+  <text x="84" y="27" fill="#94A3B8"
+    font-family="Consolas, 'SF Mono', monospace"
+    font-size="13">~/projects/01-stories-by-sai-adabala</text>
 
-  <!-- Live Status Pill -->
-  <rect x="680" y="12" width="78" height="20" rx="10" fill="#052E16" stroke="#22C55E" stroke-width="1"/>
-  <circle cx="692" cy="22" r="3.5" fill="#22C55E"/>
-  <text x="702" y="26" fill="#4ADE80" font-family="Consolas, 'SF Mono', monospace" font-size="11" font-weight="bold">ONLINE</text>
+  <!-- Online Status -->
+  <rect x="680" y="12" width="78" height="20" rx="10"
+    fill="#052E16" stroke="#22C55E"/>
 
-  <!-- Project Thumbnail Illustration -->
-  <g transform="translate(20, 56)">
-    <rect width="740" height="135" rx="12" fill="url(#p1-thumb)" stroke="#4C1D95" stroke-width="1"/>
-    
-    <!-- Camera Viewfinder Overlay -->
-    <path d="M20 20 H50 M20 20 V50" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
-    <path d="M720 20 H690 M720 20 V50" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
-    <path d="M20 115 H50 M20 115 V85" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
-    <path d="M720 115 H690 M720 115 V85" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="692" cy="22" r="3.5" fill="#22C55E">
+    <animate attributeName="opacity"
+      values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
 
-    <!-- Center Aperture Graphic -->
-    <g transform="translate(370, 67)">
-      <circle cx="0" cy="0" r="42" fill="none" stroke="#A855F7" stroke-width="2" stroke-dasharray="6 3"/>
-      <circle cx="0" cy="0" r="28" fill="none" stroke="#22D3EE" stroke-width="1.5"/>
-      <circle cx="0" cy="0" r="14" fill="#0B0F1F" stroke="#F43F5E" stroke-width="2"/>
-      <circle cx="0" cy="0" r="5" fill="#38BDF8"/>
-      <!-- Crosshairs -->
-      <line x1="-50" y1="0" x2="-32" y2="0" stroke="#A855F7" stroke-width="1.5"/>
-      <line x1="32" y1="0" x2="50" y2="0" stroke="#A855F7" stroke-width="1.5"/>
-      <line x1="0" y1="-50" x2="0" y2="-32" stroke="#A855F7" stroke-width="1.5"/>
-      <line x1="0" y1="32" x2="0" y2="50" stroke="#A855F7" stroke-width="1.5"/>
+  <text x="702" y="26" fill="#4ADE80"
+    font-family="Consolas, 'SF Mono', monospace"
+    font-size="11" font-weight="bold">ONLINE</text>
+
+  <!-- Project Thumbnail -->
+  <g transform="translate(20,56)">
+
+    <rect width="740" height="135" rx="12"
+      fill="url(#p1-thumb)" stroke="#4C1D95"/>
+
+    <g clip-path="url(#p1-clip)">
+
+      <!-- Technical Background Grid -->
+      <rect width="740" height="135" fill="url(#p1-grid)"/>
+
+      <!-- Flowing Background Waves -->
+      <path d="M0 115 Q140 45 280 95 T550 70 T740 100"
+        stroke="#A855F7" stroke-width="1.2" opacity="0.3"/>
+
+      <path d="M0 100 Q150 20 300 80 T590 45 T740 70"
+        stroke="#22D3EE" stroke-width="1.2" opacity="0.25"/>
+
+      <path d="M0 130 Q160 75 320 110 T600 95 T740 110"
+        stroke="#818CF8" stroke-width="1" opacity="0.2"/>
+
+      <!-- Camera Viewfinder Corners -->
+      <g stroke="#22D3EE" stroke-width="1.5"
+        stroke-linecap="round" opacity="0.8">
+
+        <path d="M15 35 V15 H35"/>
+        <path d="M705 15 H725 V35"/>
+        <path d="M15 100 V120 H35"/>
+        <path d="M705 120 H725 V100"/>
+
+      </g>
+
+      <!-- Background Lens Scanner -->
+      <g transform="translate(490,67)">
+
+        <circle r="57" stroke="#A855F7"
+          stroke-width="1" opacity="0.3"/>
+
+        <circle r="50" stroke="#22D3EE"
+          stroke-width="1" stroke-dasharray="5 5"
+          opacity="0.65">
+
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 0 0"
+            to="360 0 0"
+            dur="20s"
+            repeatCount="indefinite"/>
+
+        </circle>
+
+        <path d="M-65 0 H-52 M52 0 H65
+                 M0 -65 V-52 M0 52 V65"
+          stroke="#A855F7" opacity="0.7"/>
+
+      </g>
+
+      <!-- Floating Photograph 01 -->
+      <g transform="translate(380,34) rotate(-13)">
+
+        <rect width="82" height="62" rx="3"
+          fill="#10152C" stroke="#818CF8" stroke-width="1.3"/>
+
+        <rect x="5" y="5" width="72" height="45"
+          fill="url(#photo-bg)"/>
+
+        <circle cx="59" cy="16" r="6"
+          fill="#67E8F9" opacity="0.8"/>
+
+        <path d="M5 50 L25 23 L42 43 L55 30 L77 50Z"
+          fill="#312E81" stroke="#A5B4FC" stroke-width="0.8"/>
+
+        <path d="M5 50 L19 36 L34 50Z"
+          fill="#0E7490"/>
+
+        <line x1="20" y1="56" x2="62" y2="56"
+          stroke="#818CF8" opacity="0.4"/>
+
+      </g>
+
+      <!-- Floating Photograph 02 -->
+      <g transform="translate(580,15) rotate(12)">
+
+        <rect width="95" height="72" rx="3"
+          fill="#10152C" stroke="#C084FC" stroke-width="1.3"/>
+
+        <rect x="5" y="5" width="85" height="55"
+          fill="url(#photo-bg)"/>
+
+        <circle cx="68" cy="19" r="8"
+          fill="#C4B5FD" opacity="0.8"/>
+
+        <path d="M5 60 L30 24 L48 48 L66 32 L90 60Z"
+          fill="#312E81" stroke="#A78BFA" stroke-width="0.8"/>
+
+        <path d="M5 60 L25 43 L45 60Z"
+          fill="#0E7490"/>
+
+        <line x1="24" y1="66" x2="70" y2="66"
+          stroke="#A855F7" opacity="0.5"/>
+
+      </g>
+
+      <!-- Floating Photograph 03 -->
+      <g transform="translate(635,65) rotate(-9)">
+
+        <rect width="65" height="47" rx="3"
+          fill="#10152C" stroke="#22D3EE" stroke-width="1.1"/>
+
+        <rect x="4" y="4" width="57" height="33"
+          fill="url(#photo-bg)"/>
+
+        <circle cx="44" cy="17" r="7" fill="#F0ABFC"/>
+
+        <path d="M4 37 Q20 20 35 31 T61 25 V37Z"
+          fill="#164E63" stroke="#22D3EE" stroke-width="0.6"/>
+
+      </g>
+
+      <!-- DSLR Camera -->
+      <g transform="translate(460,29)">
+
+        <!-- Camera Top Viewfinder -->
+        <path d="M36 15 L47 0 H83 L96 15Z"
+          fill="url(#camera-body)"
+          stroke="#A78BFA" stroke-width="1.5"/>
+
+        <!-- Shutter Button -->
+        <rect x="115" y="8" width="22" height="8" rx="3"
+          fill="#312E81" stroke="#C084FC"/>
+
+        <!-- Main Camera Body -->
+        <rect x="0" y="15" width="160" height="78" rx="10"
+          fill="url(#camera-body)"
+          stroke="#A78BFA" stroke-width="1.6"/>
+
+        <!-- Camera Grip -->
+        <rect x="126" y="23" width="27" height="62" rx="7"
+          fill="#0B1020" stroke="#6366F1"/>
+
+        <path d="M132 34 H147 M132 42 H147
+                 M132 50 H147 M132 58 H147
+                 M132 66 H147 M132 74 H147"
+          stroke="#6366F1" stroke-width="0.8" opacity="0.5"/>
+
+        <!-- Flash -->
+        <rect x="10" y="25" width="23" height="10" rx="2"
+          fill="#172554" stroke="#67E8F9"/>
+
+        <!-- Camera Recording Indicator -->
+        <circle cx="113" cy="27" r="3" fill="#F43F5E">
+          <animate attributeName="opacity"
+            values="1;0.3;1" dur="1.5s"
+            repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Lens Outer Housing -->
+        <circle cx="72" cy="56" r="41"
+          fill="#090D1B" stroke="#A855F7" stroke-width="2"/>
+
+        <circle cx="72" cy="56" r="35"
+          fill="#111B35" stroke="#818CF8" stroke-width="1.5"/>
+
+        <circle cx="72" cy="56" r="29"
+          fill="url(#camera-lens)" stroke="#22D3EE"
+          stroke-width="1.6" filter="url(#lens-glow)"/>
+
+        <!-- Lens Aperture Blades -->
+        <g transform="translate(72,56)"
+          stroke="#67E8F9" stroke-width="0.8" opacity="0.55">
+
+          <path d="M0 -23 L13 -8 L7 8"/>
+          <path d="M20 -12 L13 8 L-4 12"/>
+          <path d="M20 12 L0 15 L-10 2"/>
+          <path d="M0 23 L-13 8 L-7 -8"/>
+          <path d="M-20 12 L-13 -8 L4 -12"/>
+          <path d="M-20 -12 L0 -15 L10 -2"/>
+
+        </g>
+
+        <!-- Lens Center -->
+        <circle cx="72" cy="56" r="12"
+          fill="#0B1020" stroke="#38BDF8"/>
+
+        <circle cx="72" cy="56" r="6"
+          fill="#22D3EE" opacity="0.65"/>
+
+        <!-- Lens Reflection -->
+        <ellipse cx="61" cy="44" rx="8" ry="4"
+          transform="rotate(-35 61 44)"
+          fill="#E0F2FE" opacity="0.5"/>
+
+        <circle cx="82" cy="67" r="3"
+          fill="#C084FC" opacity="0.65"/>
+
+      </g>
+
+      <!-- Developer HUD Text -->
+      <text x="35" y="42" fill="#22D3EE"
+        font-family="Consolas, 'SF Mono', monospace"
+        font-size="12" font-weight="bold">VISUAL GALLERY ENGINE // V1.0</text>
+
+      <text x="35" y="82" fill="#64748B"
+        font-family="Consolas, 'SF Mono', monospace"
+        font-size="11">CINEMATIC UI &amp; VISUAL EXPERIENCE</text>
+
+      <!-- Recording Status -->
+      <circle cx="39" cy="102" r="3" fill="#F43F5E">
+        <animate attributeName="opacity"
+          values="1;0.2;1" dur="1.5s"
+          repeatCount="indefinite"/>
+      </circle>
+
+      <text x="49" y="106" fill="#F43F5E"
+        font-family="Consolas, 'SF Mono', monospace"
+        font-size="10">GALLERY ACTIVE</text>
+
     </g>
-
-    <!-- Shutter Info Monospace Overlay -->
-    <text x="35" y="42" fill="#38BDF8" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">REC [●] 4K RAW</text>
-    <text x="35" y="62" fill="#94A3B8" font-family="Consolas, 'SF Mono', monospace" font-size="11">50mm  f/1.4  1/500s  ISO 200</text>
-    <text x="35" y="82" fill="#64748B" font-family="Consolas, 'SF Mono', monospace" font-size="11">STORY GALLERY ENGINE // ACTIVE</text>
-
-    <!-- Bokeh Orbs -->
-    <circle cx="210" cy="80" r="18" fill="#A855F7" opacity="0.15"/>
-    <circle cx="530" cy="50" r="24" fill="#22D3EE" opacity="0.12"/>
-    <circle cx="620" cy="85" r="14" fill="#F43F5E" opacity="0.18"/>
   </g>
 
-  <!-- Project Details -->
   <!-- Category Pill -->
-  <rect x="24" y="206" width="175" height="22" rx="11" fill="#083344" stroke="#22D3EE" stroke-width="1"/>
-  <text x="34" y="221" fill="#22D3EE" font-family="Consolas, 'SF Mono', monospace" font-size="11" font-weight="bold" letter-spacing="0.5">PHOTOGRAPHY PORTFOLIO</text>
+  <rect x="24" y="206" width="175" height="22" rx="11"
+    fill="#083344" stroke="#22D3EE"/>
+
+  <text x="34" y="221" fill="#22D3EE"
+    font-family="Consolas, 'SF Mono', monospace"
+    font-size="11" font-weight="bold"
+    letter-spacing="0.5">PHOTOGRAPHY PORTFOLIO</text>
 
   <!-- Project Title -->
-  <text x="24" y="254" fill="#FFFFFF" font-family="Consolas, 'SF Mono', monospace" font-size="21" font-weight="bold">01 // STORIES BY SAI ADABALA</text>
+  <text x="24" y="254" fill="#FFFFFF"
+    font-family="Consolas, 'SF Mono', monospace"
+    font-size="21" font-weight="bold">01 // STORIES BY SAI ADABALA</text>
 
-  <!-- Description -->
-  <text x="24" y="280" fill="#94A3B8" font-family="Consolas, 'SF Mono', monospace" font-size="14">A premium photography portfolio showcasing creative stories and visual experiences.</text>
+  <!-- Project Description -->
+  <text x="24" y="280" fill="#94A3B8"
+    font-family="Consolas, 'SF Mono', monospace"
+    font-size="14">A premium photography portfolio showcasing creative stories and visual experiences.</text>
 
-  <!-- Tech Badges -->
-  <g transform="translate(24, 304)">
-    <rect x="0" y="0" width="70" height="26" rx="13" fill="#0C1428" stroke="#38BDF8" stroke-width="1"/>
-    <text x="14" y="17" fill="#38BDF8" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">HTML5</text>
+  <!-- Technology Badges -->
+  <g transform="translate(24,304)">
 
-    <rect x="80" y="0" width="65" height="26" rx="13" fill="#0C1428" stroke="#FACC15" stroke-width="1"/>
-    <text x="94" y="17" fill="#FACC15" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">CSS3</text>
+    <rect width="70" height="26" rx="13"
+      fill="#0C1428" stroke="#38BDF8"/>
 
-    <rect x="155" y="0" width="105" height="26" rx="13" fill="#0C1428" stroke="#4ADE80" stroke-width="1"/>
-    <text x="169" y="17" fill="#4ADE80" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">JavaScript</text>
+    <text x="35" y="17" text-anchor="middle"
+      fill="#38BDF8"
+      font-family="Consolas, 'SF Mono', monospace"
+      font-size="12" font-weight="bold">HTML5</text>
 
-    <rect x="270" y="0" width="125" height="26" rx="13" fill="#0C1428" stroke="#C084FC" stroke-width="1"/>
-    <text x="284" y="17" fill="#C084FC" font-family="Consolas, 'SF Mono', monospace" font-size="12" font-weight="bold">Visual Gallery</text>
+    <rect x="80" width="65" height="26" rx="13"
+      fill="#0C1428" stroke="#FACC15"/>
+
+    <text x="112.5" y="17" text-anchor="middle"
+      fill="#FACC15"
+      font-family="Consolas, 'SF Mono', monospace"
+      font-size="12" font-weight="bold">CSS3</text>
+
+    <rect x="155" width="105" height="26" rx="13"
+      fill="#0C1428" stroke="#4ADE80"/>
+
+    <text x="207.5" y="17" text-anchor="middle"
+      fill="#4ADE80"
+      font-family="Consolas, 'SF Mono', monospace"
+      font-size="12" font-weight="bold">JavaScript</text>
+
+    <rect x="270" width="125" height="26" rx="13"
+      fill="#0C1428" stroke="#C084FC"/>
+
+    <text x="332.5" y="17" text-anchor="middle"
+      fill="#C084FC"
+      font-family="Consolas, 'SF Mono', monospace"
+      font-size="12" font-weight="bold">Visual Gallery</text>
+
   </g>
 
-  <!-- Card Action Footer -->
-  <line x1="24" y1="352" x2="756" y2="352" stroke="#1E1B4B" stroke-width="1"/>
-  
-  <!-- Buttons in card -->
-  <g transform="translate(24, 368)">
-    <!-- Repo button -->
-    <rect x="0" y="0" width="150" height="32" rx="16" fill="#0E1326" stroke="#6D28D9" stroke-width="1"/>
-    <text x="20" y="21" fill="#C084FC" font-family="Consolas, 'SF Mono', monospace" font-size="13" font-weight="bold">📁 Repository ↗</text>
-
-    <!-- Live Demo button -->
-    <rect x="165" y="0" width="145" height="32" rx="16" fill="#052E16" stroke="#22C55E" stroke-width="1"/>
-    <text x="185" y="21" fill="#4ADE80" font-family="Consolas, 'SF Mono', monospace" font-size="13" font-weight="bold">🌐 Live Demo ↗</text>
-
-    <!-- Terminal Command Hint -->
-    <text x="470" y="21" fill="#64748B" font-family="Consolas, 'SF Mono', monospace" font-size="12">git clone storiesbysaiadabala</text>
-  </g>
 </svg>

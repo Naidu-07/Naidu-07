@@ -53,7 +53,7 @@ ranga@github:~$ ls ./featured-projects
       </p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://naidu-07.github.io/ayush-enterprises/" target="_blank">
+      <a href="https://www.ayushenterprises.net" target="_blank">
         <img src="assets/project-ayush.svg" width="100%" alt="02 - Ayush Enterprises" />
       </a>
       <p align="center">
@@ -65,14 +65,13 @@ ranga@github:~$ ls ./featured-projects
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <!-- 03 Travel Website (Placeholder - replace href with your real URL when ready) -->
-      <a href="https://github.com/Naidu-07">
-        <img src="assets/project-travel.svg" width="100%" alt="03 - Travel Website" />
+      <a href="https://pkventures.vercel.app">
+        <img src="assets/project-pk.svg" width="100%" alt="03 - Travel Website" />
       </a>
       <p align="center">
-        <code>📁 Repo: [Pending Release]</code>
+        <a href="https://github.com/Naidu-07/PK-Ventures" target="_blank"><code>📁 Repository ↗</code></a>
         &nbsp;&nbsp;•&nbsp;&nbsp;
-        <code>🌐 Demo: [In Development]</code>
+        <a href="https://pkventures.vercel.app" target="_blank"><code>🌐 Live Demo ↗</code></a>
       </p>
     </td>
     <td width="50%" valign="top">

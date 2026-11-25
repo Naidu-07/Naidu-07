@@ -1,0 +1,286 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="420" viewBox="0 0 780 420" fill="none">
+
+  <defs>
+    <filter id="p4-glow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4"
+        flood-color="#7C3AED" flood-opacity="0.35"/>
+    </filter>
+
+    <linearGradient id="p4-thumb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F1F"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+
+    <linearGradient id="p4-building" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#064E3B" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <pattern id="p4-grid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M25 0 H0 V25"
+        stroke="#10B981" stroke-width="0.5" opacity="0.12"/>
+    </pattern>
+
+    <clipPath id="p4-clip">
+      <rect width="740" height="135" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- Card Body -->
+  <rect x="2" y="2" width="776" height="416" rx="18"
+    fill="#070A14" stroke="#7C3AED" stroke-width="1.8"
+    filter="url(#p4-glow)"/>
+
+  <!-- Terminal Header -->
+  <rect x="2" y="2" width="776" height="40" rx="18" fill="#0A0E1C"/>
+  <rect x="2" y="24" width="776" height="18" fill="#0A0E1C"/>
+  <line x1="2" y1="42" x2="778" y2="42" stroke="#581C87"/>
+
+  <!-- macOS Window Controls -->
+  <circle cx="24" cy="22" r="5.5" fill="#FF5F56"/>
+  <circle cx="42" cy="22" r="5.5" fill="#FFBD2E"/>
+  <circle cx="60" cy="22" r="5.5" fill="#27C93F"/>
+
+  <!-- Terminal Path -->
+  <text x="84" y="27" fill="#94A3B8"
+    font-family="Consolas, 'SF Mono', monospace"
+    font-size="13">~/projects/03-pk-ventures</text>
+
+  <!-- Online Status -->
+  <rect x="680" y="12" width="78" height="20" rx="10"
+    fill="#052E16" stroke="#22C55E"/>
+
+  <circle cx="692" cy="22" r="3.5" fill="#22C55E"/>
+
+  <text x="702" y="26" fill="#4ADE80"
+    font-family="Consolas, 'SF Mono', monospace"
+    font-size="11" font-weight="bold">ONLINE</text>
+
+  <!-- Project Thumbnail -->
+  <g transform="translate(20,56)">
+
+    <rect width="740" height="135" rx="12"
+      fill="url(#p4-thumb)" stroke="#065F46"/>
+
+    <g clip-path="url(#p4-clip)">
+
+      <!-- Technical Grid -->
+      <rect width="740" height="135" fill="url(#p4-grid)"/>
+
+      <!-- Background Contour Waves -->
+      <path d="M0 110 Q140 35 300 90 T580 50 T740 75"
+        stroke="#10B981" stroke-width="1.5" opacity="0.25"/>
+
+      <path d="M0 90 Q160 20 310 70 T590 30 T740 65"
+        stroke="#34D399" stroke-width="1.5" opacity="0.25"/>
+
+      <path d="M0 125 Q150 60 320 110 T600 85 T740 100"
+        stroke="#6EE7B7" stroke-width="1" opacity="0.2"/>
+
+      <!-- Architectural Scanner -->
+      <g transform="translate(500,68)">
+        <circle r="56" stroke="#10B981"
+          stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+
+        <circle r="46" stroke="#34D399"
+          stroke-width="0.7" opacity="0.25"/>
+
+        <path d="M-65 0 H-52 M52 0 H65 M0 -65 V-52 M0 52 V65"
+          stroke="#34D399" stroke-width="1.2"/>
+      </g>
+
+      <!-- Ground Platform -->
+      <polygon points="340,108 490,83 680,108 530,133"
+        fill="#064E3B" fill-opacity="0.5"
+        stroke="#10B981" stroke-width="1"/>
+
+      <!-- Left Building -->
+      <g stroke="#34D399" stroke-width="1.2">
+
+        <polygon points="395,44 430,31 430,98 395,111"
+          fill="url(#p4-building)"/>
+
+        <polygon points="430,31 465,44 465,111 430,98"
+          fill="#065F46" fill-opacity="0.45"/>
+
+        <polygon points="395,44 430,31 465,44 430,57"
+          fill="#10B981" fill-opacity="0.25"/>
+
+        <!-- Building Windows -->
+        <path d="M405 54 V96 M417 50 V92
+                 M440 48 V96 M452 53 V101"
+          opacity="0.65"/>
+
+        <path d="M395 66 L430 53 L465 66
+                 M395 82 L430 69 L465 82
+                 M395 98 L430 85 L465 98"
+          opacity="0.65"/>
+      </g>
+
+      <!-- Right Building -->
+      <g stroke="#34D399" stroke-width="1.2">
+
+        <polygon points="565,35 600,22 600,93 565,106"
+          fill="url(#p4-building)"/>
+
+        <polygon points="600,22 635,35 635,106 600,93"
+          fill="#065F46" fill-opacity="0.45"/>
+
+        <polygon points="565,35 600,22 635,35 600,48"
+          fill="#10B981" fill-opacity="0.25"/>
+
+        <!-- Building Windows -->
+        <path d="M575 44 V94 M587 40 V90
+                 M610 39 V91 M622 44 V96"
+          opacity="0.65"/>
+
+        <path d="M565 56 L600 43 L635 56
+                 M565 73 L600 60 L635 73
+                 M565 90 L600 77 L635 90"
+          opacity="0.65"/>
+      </g>
+
+      <!-- Gated Community Entrance -->
+      <g stroke="#6EE7B7" stroke-width="1.4">
+
+        <!-- Entrance Pillars -->
+        <rect x="475" y="76" width="12" height="35"
+          fill="#065F46"/>
+
+        <rect x="540" y="76" width="12" height="35"
+          fill="#065F46"/>
+
+        <!-- Entrance Arch -->
+        <path d="M481 76 Q513 44 546 76"
+          stroke-width="2.5"/>
+
+        <path d="M481 82 Q513 52 546 82"
+          opacity="0.6"/>
+
+        <!-- Gate -->
+        <rect x="487" y="85" width="53" height="26"
+          fill="#022C22" fill-opacity="0.5"/>
+
+        <path d="M496 85 V111 M505 85 V111
+                 M514 85 V111 M523 85 V111
+                 M532 85 V111"/>
+      </g>
+
+      <!-- Open Plot Layout -->
+      <g stroke="#10B981" stroke-width="1" opacity="0.7">
+        <polygon points="310,100 350,88 390,100 350,112"
+          fill="#10B981" fill-opacity="0.1"/>
+
+        <path d="M330 94 L370 106 M330 106 L370 94"/>
+      </g>
+
+      <!-- Location Pin -->
+      <g transform="translate(350,75)">
+        <path d="M0 22 C-5 14 -13 7 -13 -2
+                 A13 13 0 1 1 13 -2
+                 C13 7 5 14 0 22Z"
+          fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+
+        <circle cy="-2" r="4" fill="#34D399"/>
+      </g>
+
+      <!-- Road Perspective -->
+      <path d="M500 111 L465 135 M527 111 L575 135"
+        stroke="#34D399" stroke-width="1.5" opacity="0.65"/>
+
+      <path d="M514 113 L520 135"
+        stroke="#6EE7B7" stroke-dasharray="4 4" opacity="0.6"/>
+
+      <!-- Landscape Trees -->
+      <g stroke="#10B981" stroke-width="1.2">
+        <path d="M380 106 V84"/>
+        <circle cx="380" cy="79" r="9" fill="#064E3B"/>
+
+        <path d="M655 107 V83"/>
+        <circle cx="655" cy="78" r="10" fill="#064E3B"/>
+
+        <path d="M670 112 V96"/>
+        <circle cx="670" cy="92" r="7" fill="#064E3B"/>
+      </g>
+
+      <!-- HUD Corner Markers -->
+      <path d="M15 30 V15 H30
+               M710 15 H725 V30
+               M15 105 V120 H30
+               M710 120 H725 V105"
+        stroke="#34D399" stroke-width="1.5" opacity="0.65"/>
+
+      <!-- Developer-Focused HUD Text -->
+      <text x="35" y="42" fill="#34D399"
+        font-family="Consolas, 'SF Mono', monospace"
+        font-size="12" font-weight="bold">REAL ESTATE PLATFORM // V1.0</text>
+
+      <text x="35" y="82" fill="#64748B"
+        font-family="Consolas, 'SF Mono', monospace"
+        font-size="11">3D VISUALS &amp; INTERACTIVE UI</text>
+
+    </g>
+  </g>
+
+  <!-- Project Category -->
+  <rect x="24" y="206" width="180" height="22" rx="11"
+    fill="#064E3B" stroke="#10B981"/>
+
+  <text x="34" y="221" fill="#34D399"
+    font-family="Consolas, 'SF Mono', monospace"
+    font-size="11" font-weight="bold"
+    letter-spacing="0.5">REAL ESTATE &amp; WEB</text>
+
+  <!-- Project Title -->
+  <text x="24" y="254" fill="#FFFFFF"
+    font-family="Consolas, 'SF Mono', monospace"
+    font-size="21" font-weight="bold">04 // PK VENTURES</text>
+
+  <!-- Project Description -->
+  <text x="24" y="280" fill="#94A3B8"
+    font-family="Consolas, 'SF Mono', monospace"
+    font-size="14">A modern real estate website with 3D visuals and interactive UI.</text>
+
+  <!-- Developer Feature Badges -->
+  <g transform="translate(24,304)">
+
+    <!-- 3D Animations -->
+    <rect width="140" height="26" rx="13"
+      fill="#0C1428" stroke="#10B981"/>
+
+    <text x="70" y="17" text-anchor="middle" fill="#34D399"
+      font-family="Consolas, 'SF Mono', monospace"
+      font-size="12" font-weight="bold">3D Animations</text>
+
+    <!-- Interactive UI -->
+    <rect x="150" width="125" height="26" rx="13"
+      fill="#0C1428" stroke="#38BDF8"/>
+
+    <text x="212.5" y="17" text-anchor="middle" fill="#38BDF8"
+      font-family="Consolas, 'SF Mono', monospace"
+      font-size="12" font-weight="bold">Interactive UI</text>
+
+    <!-- Scroll Effects -->
+    <rect x="285" width="135" height="26" rx="13"
+      fill="#0C1428" stroke="#FACC15"/>
+
+    <text x="352.5" y="17" text-anchor="middle" fill="#FACC15"
+      font-family="Consolas, 'SF Mono', monospace"
+      font-size="12" font-weight="bold">Scroll Effects</text>
+
+    <!-- Responsive Design -->
+    <rect x="430" width="145" height="26" rx="13"
+      fill="#0C1428" stroke="#C084FC"/>
+
+    <text x="502.5" y="17" text-anchor="middle" fill="#C084FC"
+      font-family="Consolas, 'SF Mono', monospace"
+      font-size="12" font-weight="bold">Responsive Design</text>
+
+  </g>
+
+  <!-- Footer Divider -->
+  <line x1="24" y1="352" x2="756" y2="352"
+    stroke="#1E1B4B"/>
+
+</svg>
