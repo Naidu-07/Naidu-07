@@ -17,13 +17,13 @@
   <a href="https://github.com/Naidu-07" target="_blank">
     <img src="assets/github-button.svg" height="42" alt="GitHub Profile" />
   </a>&nbsp;&nbsp;
-  <a href="https://linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank">
+  <a href="http://www.linkedin.com/in/ranga-rao-naidu" target="_blank">
     <img src="assets/linkedin-button.svg" height="42" alt="LinkedIn Profile" />
   </a>&nbsp;&nbsp;
-  <a href="https://yourportfolio.com" target="_blank">
+  <a href="https://portfolio-9a4ns1408-ranga-rao-naidus-projects.vercel.app/#work" target="_blank">
     <img src="assets/portfolio-button.svg" height="42" alt="Portfolio Website" />
   </a>&nbsp;&nbsp;
-  <a href="mailto:your-email@example.com">
+  <a href="mailto:rangaraonaidu143@gmail.com">
     <img src="assets/email-button.svg" height="42" alt="Send Email" />
   </a>
 </p>
