@@ -23,9 +23,9 @@
   <a href="https://portfolio-9a4ns1408-ranga-rao-naidus-projects.vercel.app/#work" target="_blank">
     <img src="assets/portfolio-button.svg" height="42" alt="Portfolio Website" />
   </a>&nbsp;&nbsp;
-  <a href="mailto:rangaraonaidu143@gmail.com">
-    <img src="assets/email-button.svg" height="42" alt="Send Email" />
-  </a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rangaraonaidu143@gmail.com" target="_blank" rel="noopener noreferrer">
+  <img src="assets/email-button.svg" height="42" alt="Send Email" />
+</a>
 </p>
 
 </div>
